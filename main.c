@@ -59,12 +59,12 @@ void DoMandelbrotSet()
             {
                 float aa = a * a;
                 float bb = b * b;
-                float twoab = 2.0 * a * b;
+                float twoab = 2.0f * a * b;
 
                 a = aa - bb + x;
                 b = twoab + y;
 
-                if (a*a + b*b > 16.0)
+                if (a*a + b*b > 16.0f)
                   break;
 
                 n++;
@@ -74,9 +74,9 @@ void DoMandelbrotSet()
 
             if (n == nMaxIterations)
             {
-                col.r = 0;
-                col.g = 0;
-                col.b = 0;
+                col.r = 0.0f;
+                col.g = 0.0f;
+                col.b = 0.0f;
             }
             else
             {
